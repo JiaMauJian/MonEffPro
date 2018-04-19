@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace ClosedXML.MmsRepSvr {
+namespace MonEffPro.MmsRepSvr {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -76,7 +76,7 @@ namespace ClosedXML.MmsRepSvr {
         
         /// <remarks/>
         public Service() {
-            this.Url = global::ClosedXML.Properties.Settings.Default.ClosedXML_MmsRepSvr_Service;
+            this.Url = global::MonEffPro.Properties.Settings.Default.ClosedXML_MmsRepSvr_Service;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

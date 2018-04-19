@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ClosedXML
+namespace MonEffPro
 {
     public partial class Form1 : Form
     {

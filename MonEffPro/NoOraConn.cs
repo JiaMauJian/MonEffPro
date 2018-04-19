@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClosedXML
+namespace MonEffPro
 {
     public static class NoOraConn
     {

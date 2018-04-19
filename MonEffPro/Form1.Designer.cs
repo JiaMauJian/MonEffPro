@@ -1,4 +1,4 @@
-﻿namespace ClosedXML
+﻿namespace MonEffPro
 {
     partial class Form1
     {

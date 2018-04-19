@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9606BA59-6975-423B-9A73-E7419E450021}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ClosedXML</RootNamespace>
-    <AssemblyName>ClosedXML</AssemblyName>
+    <RootNamespace>MonEffPro</RootNamespace>
+    <AssemblyName>MonEffPro</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
