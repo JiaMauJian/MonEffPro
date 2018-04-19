@@ -139,8 +139,7 @@ And a.venderid<> 'RE'";
             dt.TableName = "Monitor_EFF_2018";
             var workbook = new XLWorkbook();
             workbook.Worksheets.Add(dt);
-            workbook.SaveAs("DataTableToExcel.xlsx");
-            // test
+            workbook.SaveAs("DataTableToExcel.xlsx");            
         }
 
         private void button3_Click(object sender, EventArgs e)
