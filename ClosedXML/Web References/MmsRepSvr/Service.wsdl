@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld2">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorld2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorld2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab2_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab2_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fab2_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab1_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab1_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fab1_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab1_UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab1_UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fab1_UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab3_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab3_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fab3_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab3_UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab3_UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fab3_UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab5_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab5_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fab5_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab5_UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab5_UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fab5_UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab6P1_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab6P1_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fab6P1_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab6P1_UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fab6P1_UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fab6P1_UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="F05W_BindDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="F05W_BindDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="F05W_BindDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="F05W_UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Strsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="F05W_UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="F05W_UpdateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScalarResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NowTimeStr">
+        <s:complexType />
+      </s:element>
+      <s:element name="NowTimeStrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NowTimeStrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NowTimeStrMi">
+        <s:complexType />
+      </s:element>
+      <s:element name="NowTimeStrMiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NowTimeStrMiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NowTimeStrKey">
+        <s:complexType />
+      </s:element>
+      <s:element name="NowTimeStrKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NowTimeStrKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NowDayStr">
+        <s:complexType />
+      </s:element>
+      <s:element name="NowDayStrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NowDayStrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NowTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="NowTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NowTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2SoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld2" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorld2SoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorld2Response" />
+  </wsdl:message>
+  <wsdl:message name="BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab2_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab2_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="Fab2_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab2_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab1_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab1_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="Fab1_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab1_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab1_UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab1_UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="Fab1_UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab1_UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab3_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab3_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="Fab3_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab3_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab3_UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab3_UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="Fab3_UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab3_UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab5_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab5_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="Fab5_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab5_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab5_UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab5_UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="Fab5_UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab5_UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab6P1_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab6P1_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="Fab6P1_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab6P1_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fab6P1_UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Fab6P1_UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="Fab6P1_UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Fab6P1_UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="F05W_BindDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:F05W_BindDataSet" />
+  </wsdl:message>
+  <wsdl:message name="F05W_BindDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:F05W_BindDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="F05W_UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:F05W_UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="F05W_UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:F05W_UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScalar" />
+  </wsdl:message>
+  <wsdl:message name="GetScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrSoapIn">
+    <wsdl:part name="parameters" element="tns:NowTimeStr" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrSoapOut">
+    <wsdl:part name="parameters" element="tns:NowTimeStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrMiSoapIn">
+    <wsdl:part name="parameters" element="tns:NowTimeStrMi" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrMiSoapOut">
+    <wsdl:part name="parameters" element="tns:NowTimeStrMiResponse" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrKeySoapIn">
+    <wsdl:part name="parameters" element="tns:NowTimeStrKey" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeStrKeySoapOut">
+    <wsdl:part name="parameters" element="tns:NowTimeStrKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="NowDayStrSoapIn">
+    <wsdl:part name="parameters" element="tns:NowDayStr" />
+  </wsdl:message>
+  <wsdl:message name="NowDayStrSoapOut">
+    <wsdl:part name="parameters" element="tns:NowDayStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:NowTime" />
+  </wsdl:message>
+  <wsdl:message name="NowTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:NowTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <wsdl:input message="tns:HelloWorld2SoapIn" />
+      <wsdl:output message="tns:HelloWorld2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindDataSet">
+      <wsdl:input message="tns:BindDataSetSoapIn" />
+      <wsdl:output message="tns:BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <wsdl:input message="tns:UpdateDataSoapIn" />
+      <wsdl:output message="tns:UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab2_BindDataSet">
+      <wsdl:input message="tns:Fab2_BindDataSetSoapIn" />
+      <wsdl:output message="tns:Fab2_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_BindDataSet">
+      <wsdl:input message="tns:Fab1_BindDataSetSoapIn" />
+      <wsdl:output message="tns:Fab1_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_UpdateData">
+      <wsdl:input message="tns:Fab1_UpdateDataSoapIn" />
+      <wsdl:output message="tns:Fab1_UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_BindDataSet">
+      <wsdl:input message="tns:Fab3_BindDataSetSoapIn" />
+      <wsdl:output message="tns:Fab3_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_UpdateData">
+      <wsdl:input message="tns:Fab3_UpdateDataSoapIn" />
+      <wsdl:output message="tns:Fab3_UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_BindDataSet">
+      <wsdl:input message="tns:Fab5_BindDataSetSoapIn" />
+      <wsdl:output message="tns:Fab5_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_UpdateData">
+      <wsdl:input message="tns:Fab5_UpdateDataSoapIn" />
+      <wsdl:output message="tns:Fab5_UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_BindDataSet">
+      <wsdl:input message="tns:Fab6P1_BindDataSetSoapIn" />
+      <wsdl:output message="tns:Fab6P1_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_UpdateData">
+      <wsdl:input message="tns:Fab6P1_UpdateDataSoapIn" />
+      <wsdl:output message="tns:Fab6P1_UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="F05W_BindDataSet">
+      <wsdl:input message="tns:F05W_BindDataSetSoapIn" />
+      <wsdl:output message="tns:F05W_BindDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="F05W_UpdateData">
+      <wsdl:input message="tns:F05W_UpdateDataSoapIn" />
+      <wsdl:output message="tns:F05W_UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScalar">
+      <wsdl:input message="tns:GetScalarSoapIn" />
+      <wsdl:output message="tns:GetScalarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStr">
+      <wsdl:input message="tns:NowTimeStrSoapIn" />
+      <wsdl:output message="tns:NowTimeStrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrMi">
+      <wsdl:input message="tns:NowTimeStrMiSoapIn" />
+      <wsdl:output message="tns:NowTimeStrMiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrKey">
+      <wsdl:input message="tns:NowTimeStrKeySoapIn" />
+      <wsdl:output message="tns:NowTimeStrKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NowDayStr">
+      <wsdl:input message="tns:NowDayStrSoapIn" />
+      <wsdl:output message="tns:NowDayStrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NowTime">
+      <wsdl:input message="tns:NowTimeSoapIn" />
+      <wsdl:output message="tns:NowTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap:operation soapAction="http://tempuri.org/UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab2_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/Fab2_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/Fab1_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_UpdateData">
+      <soap:operation soapAction="http://tempuri.org/Fab1_UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/Fab3_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_UpdateData">
+      <soap:operation soapAction="http://tempuri.org/Fab3_UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/Fab5_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_UpdateData">
+      <soap:operation soapAction="http://tempuri.org/Fab5_UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/Fab6P1_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_UpdateData">
+      <soap:operation soapAction="http://tempuri.org/Fab6P1_UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="F05W_BindDataSet">
+      <soap:operation soapAction="http://tempuri.org/F05W_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="F05W_UpdateData">
+      <soap:operation soapAction="http://tempuri.org/F05W_UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalar">
+      <soap:operation soapAction="http://tempuri.org/GetScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStr">
+      <soap:operation soapAction="http://tempuri.org/NowTimeStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrMi">
+      <soap:operation soapAction="http://tempuri.org/NowTimeStrMi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrKey">
+      <soap:operation soapAction="http://tempuri.org/NowTimeStrKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowDayStr">
+      <soap:operation soapAction="http://tempuri.org/NowDayStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTime">
+      <soap:operation soapAction="http://tempuri.org/NowTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld2">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab2_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/Fab2_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/Fab1_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab1_UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/Fab1_UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/Fab3_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab3_UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/Fab3_UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/Fab5_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab5_UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/Fab5_UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/Fab6P1_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fab6P1_UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/Fab6P1_UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="F05W_BindDataSet">
+      <soap12:operation soapAction="http://tempuri.org/F05W_BindDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="F05W_UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/F05W_UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalar">
+      <soap12:operation soapAction="http://tempuri.org/GetScalar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStr">
+      <soap12:operation soapAction="http://tempuri.org/NowTimeStr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrMi">
+      <soap12:operation soapAction="http://tempuri.org/NowTimeStrMi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTimeStrKey">
+      <soap12:operation soapAction="http://tempuri.org/NowTimeStrKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowDayStr">
+      <soap12:operation soapAction="http://tempuri.org/NowDayStr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NowTime">
+      <soap12:operation soapAction="http://tempuri.org/NowTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://mmsf2ap.motech.corp/Repsvr/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://mmsf2ap.motech.corp/Repsvr/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
