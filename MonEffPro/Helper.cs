@@ -44,9 +44,9 @@ namespace MonEffPro
             }
         }
 
-        public static DataTable CreateDataTable<MonEff>(this IEnumerable<MonEff> list) where MonEff : class, new()
+        public static DataTable CreateDataTable<T>(this IEnumerable<T> list) where T : class, new()
         {
-            Type type = typeof(MonEff);
+            Type type = typeof(T);
             var properties = type.GetProperties();
 
             DataTable dataTable = new DataTable();
@@ -55,7 +55,7 @@ namespace MonEffPro
                 dataTable.Columns.Add(new DataColumn(info.Name, Nullable.GetUnderlyingType(info.PropertyType) ?? info.PropertyType));
             }
 
-            foreach (MonEff entity in list)
+            foreach (T entity in list)
             {
                 object[] values = new object[properties.Length];
                 for (int i = 0; i < properties.Length; i++)
