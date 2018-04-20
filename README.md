@@ -3,8 +3,8 @@
 # 透過LINQPad學習LINQ
 * 安裝LINQPad
 * 安裝LINQPad-> IQDriver (連Oracle使用)
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+[conn_setting1](https://github.com/JiaMauJian/MonEffPro/blob/master/LINQPad/conn_setting1.png)
+[conn_setting2](https://github.com/JiaMauJian/MonEffPro/blob/master/LINQPad/conn_setting2.png)
 * 擴充Table -> Class的Extension Function (LINQPadExtensions.cs 把Code貼到LINQPad My Extensions裡面，然後按F5)
 * 按F4加入Dapper.dll參考以及增加Additional Namespace Imports (Dapper.dll可以用VS2017 Nuget安裝後再去把它摳出來)
 ```
@@ -15,7 +15,7 @@ System.Data.Entity
 ```
 this.Connection.DumpClass("SELECT * FROM EDWADM.MEDA_MMS_ipa_P@DBLINK_EDWUSER_28").Dump();
 ```
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+[gen_class](https://github.com/JiaMauJian/MonEffPro/blob/master/LINQPad/gen_class.png)
 
 * SQL產生LINQ Object
 ```
@@ -111,4 +111,4 @@ public class MEDA_MMS_ipa_P
 
 }
 ```
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+[gen_linq](https://github.com/JiaMauJian/MonEffPro/blob/master/LINQPad/gen_linq.png)
