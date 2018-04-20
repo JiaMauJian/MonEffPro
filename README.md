@@ -6,7 +6,7 @@
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 * 擴充Table -> Class的Extension Function (LINQPadExtensions.cs 把Code貼到LINQPad My Extensions裡面，然後按F5)
-* 按F4加入Dapper參考以及增加Additional Namespace Imports
+* 按F4加入Dapper.dll參考以及增加Additional Namespace Imports (Dapper.dll可以用VS2017 Nuget安裝後再去把它摳出來)
 ```
 Dapper
 System.Data.Entity
