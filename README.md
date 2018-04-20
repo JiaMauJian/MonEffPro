@@ -1,7 +1,10 @@
 # MonEffPro
 
-# LINQPad
+# 透過LINQPad學習LINQ
 * 安裝LINQPad
+* 安裝LINQPad-> IQDriver (連Oracle使用)
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 * 擴充Table -> Class的Extension Function (LINQPadExtensions.cs 把Code貼到LINQPad My Extensions裡面，然後按F5)
 * 按F4加入Dapper參考以及增加Additional Namespace Imports
 ```
@@ -12,6 +15,8 @@ System.Data.Entity
 ```
 this.Connection.DumpClass("SELECT * FROM EDWADM.MEDA_MMS_ipa_P@DBLINK_EDWUSER_28").Dump();
 ```
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 * SQL產生LINQ Object
 ```
 void Main()
@@ -106,3 +111,4 @@ public class MEDA_MMS_ipa_P
 
 }
 ```
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
